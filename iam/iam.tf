@@ -8,12 +8,12 @@ locals {
     }
     UserS3Create = {
       name      = "S3Create"
-      actions   = ["s3:CreateBucket", "s3:ListAllMyBuckets"]
+      actions   = ["s3:CreateBucket", "s3:ListBucket"]
       resources = ["*"]
     }
     UserS3Delete = {
       name      = "S3Delete"
-      actions   = ["s3:CreateBucket", "s3:DeleteBucket", "s3:ListAllMyBuckets"]
+      actions   = ["s3:CreateBucket", "s3:DeleteBucket", "s3:ListBucket"]
       resources = ["*"]
     }
   }
