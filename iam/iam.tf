@@ -3,17 +3,17 @@ locals {
   users_and_policies = {
     UserS3List = {
       name      = "S3List"
-      actions   = ["s3:ListAllMyBuckets"]
+      actions   = ["s3:ListBucket"]
       resources = ["*"]
     }
     UserS3Create = {
       name      = "S3Create"
-      actions   = ["s3:CreateBucket"]
+      actions   = ["s3:CreateBucket", "s3:ListAllMyBuckets"]
       resources = ["*"]
     }
     UserS3Delete = {
       name      = "S3Delete"
-      actions   = ["s3:DeleteBucket"]
+      actions   = ["s3:CreateBucket", "s3:DeleteBucket", "s3:ListAllMyBuckets"]
       resources = ["*"]
     }
   }
